@@ -587,14 +587,29 @@ a:focus {
   color: #7373f5;
 }
 
-.c-link-cta::after {
+.c-link-cta::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #7373f5;
+  transform: scaleX(0.5);
+  transform-origin: left;
+  transition-property: transform background-color;
+  transition-duration: 0.175s;
+  transition-timing-function: ease-in;
 }
 
 .c-link-cta:hover {
   color: #3e3ea8;
 }
 
-.c-link-cta:hover::after {
+.c-link-cta:hover::before {
+  transform: scaleX(1);
+  background-color: #3e3ea8;
 }
 
 /*------------------------------------*\
